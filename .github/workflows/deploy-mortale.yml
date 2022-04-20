@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: install node_modules
-       run: npm cache clean -f && npm i
+       run: npm ci
   # This workflow contains a single job called "build"
   job2:
     needs: job1
