@@ -22,8 +22,10 @@ jobs:
      - uses: actions/setup-node@v1
        with:
           node-version: 12
-     - name: install node_modules
-       run: |
-        npm ci
-        npm run docs:deploy
+        env:
+          GITHUB_TOKEN: ${{secrets.TOKEN}}
+     - name: Install dependencies
+       run:  npm ci
+     - name: Deploy  
+       run: npm run docs:deploy
 
