@@ -39,8 +39,8 @@ jobs:
       - name: deploy mortale.github.io
         run: |
           echo $(pwd)
-          cd docs/.vitepress/dist
-          git init
-          git add -A
-          git commit -m 'deploy with theme'
-           git push -f git@github.com:mortale/mortale.github.io.git master
+          # cd docs/.vitepress/dist
+          # git init
+          # git add -A
+          # git commit -m 'deploy with theme'
+          # git push -f git@github.com:mortale/mortale.github.io.git master
