@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
      - name: install node_modules
-       run: npm -v
+       run: npm i
   # This workflow contains a single job called "build"
   job2:
     needs: job1
