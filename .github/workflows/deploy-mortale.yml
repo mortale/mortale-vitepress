@@ -38,6 +38,7 @@ jobs:
       # Runs a single command using the runners shell
       - name: deploy mortale.github.io
         run: |
+          echo $(pwd)
           cd docs/.vitepress/dist
           git init
           git add -A
