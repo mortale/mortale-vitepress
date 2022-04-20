@@ -23,8 +23,9 @@ jobs:
        with:
           node-version: 12
      - name: install node_modules
-     - run: npm ci
-     - run: npm run build
+       run: |
+        npm ci
+        npm run build
   # This workflow contains a single job called "build"
   deploy:
     needs: build
