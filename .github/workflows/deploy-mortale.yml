@@ -25,7 +25,7 @@ jobs:
      - name: install node_modules
        run: |
         npm ci
-        npm run build
+        npm run docs:build
   # This workflow contains a single job called "build"
   deploy:
     needs: build
