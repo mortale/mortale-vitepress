@@ -22,10 +22,11 @@ jobs:
      - uses: actions/setup-node@v1
        with:
           node-version: 12
-          GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
-          EMAIL: ${{ secrets.EMAIL }}
      - name: Install dependencies
        run: npm ci
-     - name: Deploy  
+     - name: Deploy
+       env:
+          GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
+          EMAIL: ${{ secrets.EMAIL }}
        run: npm run docs:deploy
 
