@@ -22,13 +22,12 @@ jobs:
      - uses: actions/setup-node@v1
        with:
           node-version: 12
-          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+          GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
           EMAIL: ${{ secrets.EMAIL }}
      - name: Install dependencies
        run:  npm ci
      - name: Deploy  
        run: |
-         echo ${EMAIL},
-         echo ${sercets.EMAIL},
+         echo ${sercets},
          npm run docs:deploy
 
