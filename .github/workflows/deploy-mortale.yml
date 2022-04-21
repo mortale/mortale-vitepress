@@ -29,6 +29,6 @@ jobs:
        run:  npm ci
      - name: Deploy  
        run: |
-         EMAIL=${EMAIL},
+         echo ${EMAIL},
          npm run docs:deploy
 
