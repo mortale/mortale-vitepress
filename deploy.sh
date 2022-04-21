@@ -4,13 +4,14 @@
 set -e
 
 # 构建
-npm run docs:build
+# npm run docs:build
 
 # 进入待发布的目录
-cd docs/.vitepress/dist
+# cd docs/.vitepress/dist
 
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
+echo 1111
 echo ${EMAIL}
 # git config --global user.email ${EMAIL}
 # git config --global user.name mortale
