@@ -9,15 +9,15 @@ npm run docs:build
 cd docs/.vitepress/dist
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
-git config --local user.email "1695588928@qq.com"
-git config --local user.name "mortale"
 git init
+git config user.email $EMAIL
+git config user.name "mortale"
 git add -A
 git commit -m 'theme deploy'
 git config -l
 
 # 如果部署到 https://<USERNAME>.github.io
-git push -f https://git@github.com:mortale/mortale.github.io.git master
+ git push -f https://mortale:${{ secrets.ACCESS_TOKEN }}@github.com/mortale/mortale.github.io.git master:gh-pages
 # 如果是部署到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
