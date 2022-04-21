@@ -4,10 +4,10 @@
 set -e
 
 # 构建
-npm run docs:build
-
+# npm run docs:build
+EMAIL="1695588928@qq.com"
 # 进入待发布的目录
-cd docs/.vitepress/dist
+# cd docs/.vitepress/dist
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
 echo $EMAIL
