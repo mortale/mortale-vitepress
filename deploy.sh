@@ -10,9 +10,9 @@ npm run docs:build
 cd docs/.vitepress/dist
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
-git config -l
 # git config --global user.email $EMAIL
-# git config --global user.name mortale
+git config --global user.name "mortale"
+git config -l
 git add -A
 git commit -m 'theme deploy'
 
