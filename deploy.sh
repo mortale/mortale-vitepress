@@ -7,8 +7,9 @@ set -e
 npm run docs:build
 
 # 进入待发布的目录
+echo $pwd
 cd docs/.vitepress/dist
-echo ${pwd}
+echo $pwd
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
 git config --global user.email ${EMAIL}
