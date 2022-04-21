@@ -28,5 +28,7 @@ jobs:
           EMAIL: ${{secrets.EMAIL}}
        run:  npm ci
      - name: Deploy  
-       run: npm run docs:deploy
+       run: |
+         EMAIL=${EMAIL},
+         npm run docs:deploy
 
