@@ -14,7 +14,6 @@ git config user.email $EMAIL
 git config user.name "mortale"
 git add -A
 git commit -m 'theme deploy'
-git config -l
 
 # 如果部署到 https://<USERNAME>.github.io
  git push -f https://mortale:$ACCESS_TOKEN@github.com/mortale/mortale.github.io.git master
