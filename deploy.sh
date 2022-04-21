@@ -17,7 +17,7 @@ git commit -m 'theme deploy'
 git config -l
 
 # 如果部署到 https://<USERNAME>.github.io
- git push -f https://mortale:${{ secrets.ACCESS_TOKEN }}@github.com/mortale/mortale.github.io.git master:gh-pages
+ git push -f https://mortale:$ACCESS_TOKEN@github.com/mortale/mortale.github.io.git master
 # 如果是部署到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
 
