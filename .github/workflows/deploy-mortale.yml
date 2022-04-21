@@ -25,9 +25,7 @@ jobs:
           GIT_TOKEN: ${{ secrets.GIT_TOKEN }}
           EMAIL: ${{ secrets.EMAIL }}
      - name: Install dependencies
-       run:  npm ci
+       run: npm ci
      - name: Deploy  
-       run: |
-         echo ${{ sercets }},
-         npm run docs:deploy
+       run: npm run docs:deploy
 
