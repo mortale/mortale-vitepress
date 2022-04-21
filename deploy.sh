@@ -11,14 +11,15 @@ cd docs/.vitepress/dist
 
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
-git config --global user.email ${EMAIL}
-git config --global user.name mortale
-git init
-git add -A
-git commit -m 'theme deploy'
+echo ${EMAIL}
+# git config --global user.email ${EMAIL}
+# git config --global user.name mortale
+# git init
+# git add -A
+# git commit -m 'theme deploy'
 
 # 如果部署到 https://<USERNAME>.github.io
- git push -f https://mortale:${GITHUB_TOKEN}@github.com:mortale/mortale.github.io.git master
+# git push -f https://git@github.com:mortale/mortale.github.io.git master
 
 # 如果是部署到 https://<USERNAME>.github.io/<REPO>
 # git push -f git@github.com:<USERNAME>/<REPO>.git master:gh-pages
