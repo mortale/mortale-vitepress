@@ -15,7 +15,7 @@ cd mortale.github.io
 git init
 git config user.email $EMAIL
 git config user.name "mortale"
-cp -rf dist/hashmap.json dist/index.html .
+cp -rf ../dist/hashmap.json ../dist/index.html .
 rsync -r --delete ../dist/assets/ ./assets
 git add -A
 git commit -m 'theme deploy'
