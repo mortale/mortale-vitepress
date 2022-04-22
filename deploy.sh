@@ -14,8 +14,8 @@ cd mortale.github.io
 git init
 git config user.email $EMAIL
 git config user.name "mortale"
-cp -rf ../dist/hashmap.json ../dist/index.html mortale.github.io/
-rsync -r --delete ../dist/assets/ mortale.github.io/assets/
+cp -rf ../dist/hashmap.json ../dist/index.html /
+rsync -r --delete ../dist/assets/ assets/
 git add -A
 git commit -m 'theme deploy'
 # 如果部署到 https://<USERNAME>.github.io
