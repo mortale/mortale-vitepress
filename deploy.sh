@@ -10,13 +10,12 @@ cd docs/.vitepress
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
 git clone  https://oauth2:$ACCESS_TOKEN@github.com/mortale/mortale.github.io.git
-# git clone  https://github.com/mortale/mortale.github.io.git
 cd mortale.github.io
 git init
 git config user.email $EMAIL
 git config user.name "mortale"
-cp -rf ../dist/hashmap.json ../dist/index.html .
-rsync -r --delete ../dist/assets/ ./assets
+rm -rf ./assets
+cp -rf ../dist/assets ../dist/hashmap.json ../dist/index.html .
 git add -A
 git commit -m 'theme deploy'
 # 如果部署到 https://<USERNAME>.github.io
