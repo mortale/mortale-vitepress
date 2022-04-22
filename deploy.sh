@@ -9,6 +9,7 @@ npm run docs:build
 cd docs/.vitepress
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
+git init
 git config user.email $EMAIL
 git config user.name "mortale"
 git clone  https://oauth2:$ACCESS_TOKEN@github.com/mortale/mortale.github.io.git
