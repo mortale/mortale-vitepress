@@ -9,13 +9,13 @@ npm run docs:build
 cd docs/.vitepress
 # 如果是发布到自定义域名
 # echo 'www.example.com' > CNAME
+git clone  https://oauth2:$ACCESS_TOKEN@github.com/mortale/mortale.github.io.git
+cd mortale.github.io
 git init
 git config user.email $EMAIL
 git config user.name "mortale"
-git clone  https://oauth2:$ACCESS_TOKEN@github.com/mortale/mortale.github.io.git
-cp -rf dist/hashmap.json dist/index.html mortale.github.io/
-rsync -r --delete dist/assets/ mortale.github.io/assets/
-cd mortale.github.io
+cp -rf ../dist/hashmap.json ../dist/index.html mortale.github.io/
+rsync -r --delete ../dist/assets/ mortale.github.io/assets/
 git add -A
 git commit -m 'theme deploy'
 # 如果部署到 https://<USERNAME>.github.io
