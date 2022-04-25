@@ -16,8 +16,8 @@
 </template>
 
 <script lang="ts">
-import config from '../../config'
-
+import getConfig from '../../config'
+const config = getConfig()
 export default {
   name: 'react17',
   data () {
