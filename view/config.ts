@@ -6,7 +6,7 @@ const config: Record<string, string> = {
   
   // 线上环境地址
   const getConfig = () => {
-    if (import.meta.env.MODE === 'production') {
+    if (import.meta.env.MODE === 'production' && typeof window !== undefined) {
       // 基座应用和子应用部署在同一个域名下，这里使用location.origin进行补全
       Object.keys(config).forEach((key) => {
         config[key] = window.location.origin
