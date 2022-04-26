@@ -1,6 +1,5 @@
 <template>
   <div>
-    <h1>micro-app-test</h1>
     <micro-app
       name='appname-react17'
       :url='url'

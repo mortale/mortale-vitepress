@@ -5,7 +5,6 @@ import { MicroApp } from "../../../view/micro-app";
 import microApp from "@micro-zoe/micro-app";
 microApp.start();
 
-
 export default {
   ...Theme,
   enhanceApp({ app }) {
