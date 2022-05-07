@@ -1,5 +1,4 @@
 <template>
-  <div>
     <micro-app
       name='appname-react17'
       :url='url'
@@ -10,8 +9,8 @@
       @unmount='handleUnmount'
       @error='handleError'
       @datachange='handleDataChange'
+      class="react17-micro-app"
     ></micro-app>
-  </div>
 </template>
 
 <script lang="ts">
@@ -19,8 +18,9 @@ import getConfig from '../../config'
 const config = getConfig()
 export default {
   name: 'react17',
+  props:['cacheLocation'],
   data () {
-
+    location = this.cacheLocation
     return {
       url: `${config.react17}/child/react17/`,
       microAppData: {msg: '来自基座的数据'}
@@ -59,5 +59,11 @@ export default {
 }
 </script>
 
-<style>
+<style lang="less">
+.react17-micro-app{
+  height: 800px;
+}
+micro-app[name=appname-react17] aside{
+    display:block !important;
+}
 </style>
