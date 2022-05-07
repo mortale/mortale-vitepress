@@ -63,7 +63,7 @@ export default {
 .react17-micro-app{
   height: 800px;
 }
-micro-app[name=appname-react17] aside{
+div#react17-root aside{
     display:block !important;
 }
 </style>

@@ -4,7 +4,5 @@ function data() {
     cacheLocation: location,
   };
 }
-
-export default {
-  data,
-};
+const result = typeof window !== 'undefined'? {data}:{}
+export default result
